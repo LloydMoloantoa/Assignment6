@@ -1,0 +1,73 @@
+<link href="css/login.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="css/popup.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text.css' />
+<!--//webfonts-->
+
+<div class="main">
+    <div class="header">
+        <h1>Welcome to ASS6</h1>
+        <h1>Login or Create</h1>
+    </div>
+    <form action="/register" method="post">
+        <ul class="left-form">
+            <h2>New Account:</h2>
+            <li>
+                <input type="text" name="fullname" placeholder="Fullname" required />
+                <a href="#" class="icon ticker"> </a>
+                <div class="clear"> </div>
+            </li>
+            <li>
+                <input type="email" name="email" placeholder="Email" required />
+                <a href="#" class="icon ticker"> </a>
+                <div class="clear"> </div>
+            </li>
+            <li>
+                <input type="password" name="password" placeholder="password" required />
+                <a href="#" class="icon into"> </a>
+                <div class="clear"> </div>
+            </li>
+            <li>
+                <input type="password" name="cpassword" placeholder="password" required />
+                <a href="#" class="icon into"> </a>
+                <div class="clear"> </div>
+            </li>
+
+            <input type="submit" onclick="myFunction()" value="Create Account">
+            <div class="clear"> </div>
+        </ul>
+    </form>
+
+
+
+    <form action="/home" method="post">
+        <ul class="right-form">
+            <h3>Login:</h3>
+            <div>
+                <li><input type="email" name="email" placeholder="Email" required /></li>
+                <li> <input type="password" name="password" placeholder="Password" required /></li>
+                <h4>enter email n password if you have an account</h4>
+                <input type="submit" onclick="myFunction()" value="Login">
+            </div>
+            <div class="clear"> </div>
+        </ul>
+        <div class="clear"> </div>
+    </form>
+
+    <body>
+        <button id="btnChangeBg" class="btn btn-primary float-right" style="font-size: 1.5rem;">Disclaimer</button>
+        <script src="js/popup.js"></script>
+        <script>
+            document.querySelector('#btnChangeBg').addEventListener('click', () => {
+                Confirm.open({
+                    title: 'warning!',
+                    message: 'The analysis are made based upon mechine learning models and probabilities',
+                })
+            });
+        </script>
+    </body>
+
+
+
+
+</div>
